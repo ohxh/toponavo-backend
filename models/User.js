@@ -80,7 +80,9 @@ UserSchema.methods.toProfileJSONFor = function(user) {
   return {
     username: this.username,
     bio: this.bio,
-    image: this.image || "http://i.pravatar.cc/300",
+    image:
+      this.image ||
+      "https://static.licdn.com/scds/common/u/images/themes/katy/ghosts/person/ghost_person_200x200_v1.png",
     following: user ? user.isFollowing(this._id) : false
   };
 };
